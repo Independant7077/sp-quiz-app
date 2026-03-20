@@ -1,0 +1,25 @@
+body{
+
+font-family:Arial;
+background:#f4f4f4;
+text-align:center;
+
+}
+
+.form{
+
+background:white;
+padding:30px;
+margin:50px auto;
+width:300px;
+border-radius:8px;
+
+}
+
+button{
+
+padding:10px;
+margin:10px;
+cursor:pointer;
+
+}
