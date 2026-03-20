@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Admin Dashboard</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<h1>Admin Dashboard</h1>
+
+<table border="1" id="resultTable">
+<tr>
+<th>ID</th>
+<th>Name</th>
+<th>Email</th>
+<th>Score</th>
+<th>Date</th>
+</tr>
+</table>
+
+<script>
+
+fetch("/results")
+.then(res=>res.json())
+.then(data=>{
+
+let table=document.getElementById("resultTable")
+
+data.forEach(row=>{
+
+let tr=document.createElement("tr")
+
+tr.innerHTML=`
+<td>${row.id}</td>
+<td>${row.name}</td>
+<td>${row.email}</td>
+<td>${row.score}</td>
+<td>${row.date}</td>
+`
+
+table.appendChild(tr)
+
+})
+
+})
+
+</script>
+
+</body>
+</html>

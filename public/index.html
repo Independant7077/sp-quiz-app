@@ -9,20 +9,38 @@
 
 <h1>Online Quiz Portal</h1>
 
-<div class="form-box">
-<h2>Start Quiz</h2>
+<div class="form">
 
 <input id="name" placeholder="Enter Name">
 <input id="email" placeholder="Enter Email">
 
-<h3>Select Category</h3>
+<h3>Select Quiz Category</h3>
 
 <button onclick="startQuiz('history')">History</button>
-<button onclick="startQuiz('geography')">Geography</button>
 <button onclick="startQuiz('science')">Science</button>
+<button onclick="startQuiz('geography')">Geography</button>
+
+<hr>
+
+<h3>Admin Access</h3>
+
+<button onclick="showAdminLogin()">Admin Login</button>
+<button onclick="logout()">Logout</button>
+</div>
+
+<!-- Admin Login Popup -->
+<div id="adminLogin" style="display:none;">
+
+<h3>Admin Login</h3>
+
+<input id="adminUser" placeholder="Username">
+<input id="adminPass" type="password" placeholder="Password">
+
+<button onclick="adminLogin()">Login</button>
 
 </div>
 
 <script src="script.js"></script>
+
 </body>
 </html>
