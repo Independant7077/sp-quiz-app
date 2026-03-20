@@ -64,3 +64,15 @@ app.get("/results", (req, res) => {
 app.listen(3000, () => {
     console.log("Server running on http://localhost:3000")
 })
+
+app.get("/results/:email",(req,res)=>{
+  const email = req.params.email;
+
+  db.all(
+    "SELECT * FROM results WHERE email=? ORDER BY id DESC",
+    [email],
+    (err,rows)=>{
+      res.json(rows)
+    }
+  )
+})
