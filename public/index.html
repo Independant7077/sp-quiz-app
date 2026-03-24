@@ -24,8 +24,13 @@
 
 <h3>Admin Access</h3>
 
-<button onclick="showAdminLogin()">Admin Login</button>
-<button onclick="logout()">Logout</button>
+<button onclick="document.getElementById('adminLogin').style.display='block'">
+Admin Login
+</button>
+
+<button onclick="adminLogin()">Submit Login</button>
+
+
 </div>
 
 <!-- Admin Login Popup -->
@@ -36,7 +41,6 @@
 <input id="adminUser" placeholder="Username">
 <input id="adminPass" type="password" placeholder="Password">
 
-<button onclick="adminLogin()">Login</button>
 
 </div>
 

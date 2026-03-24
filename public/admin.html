@@ -8,8 +8,11 @@
 <body>
 
 <h1>Admin Dashboard</h1>
+<button id="logoutBtn" onclick="logout()" style="display:none;">
+Logout
+</button>
 
-<table border="1" id="resultTable">
+<table border="1" id="table">
 <tr>
 <th>ID</th>
 <th>Name</th>
@@ -19,33 +22,9 @@
 </tr>
 </table>
 
-<script>
+<script src="script.js"></script>
 
-fetch("/results")
-.then(res=>res.json())
-.then(data=>{
 
-let table=document.getElementById("resultTable")
-
-data.forEach(row=>{
-
-let tr=document.createElement("tr")
-
-tr.innerHTML=`
-<td>${row.id}</td>
-<td>${row.name}</td>
-<td>${row.email}</td>
-<td>${row.score}</td>
-<td>${row.date}</td>
-`
-
-table.appendChild(tr)
-
-})
-
-})
-
-</script>
 
 </body>
 </html>
